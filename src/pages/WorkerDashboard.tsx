@@ -77,7 +77,6 @@ const JoinEmployer: React.FC<{ workerAddress: string }> = ({
   const isValid = employerAddr.startsWith("G") && employerAddr.length >= 56;
   const optionIds = results.map((_, i) => `employer-opt-${i}`);
 
-
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     if (!query || query.length < 2) {
@@ -325,12 +324,16 @@ const JoinEmployer: React.FC<{ workerAddress: string }> = ({
                     aria-haspopup="listbox"
                     aria-expanded={showDropdown}
                     aria-autocomplete="list"
-                    aria-activedescendant={activeIndex >= 0 ? optionIds[activeIndex] : undefined}
+                    aria-activedescendant={
+                      activeIndex >= 0 ? optionIds[activeIndex] : undefined
+                    }
                     onKeyDown={(e) => {
                       if (!showDropdown) return;
                       if (e.key === "ArrowDown") {
                         e.preventDefault();
-                        setActiveIndex((i) => Math.min(i + 1, results.length - 1));
+                        setActiveIndex((i) =>
+                          Math.min(i + 1, results.length - 1),
+                        );
                       } else if (e.key === "ArrowUp") {
                         e.preventDefault();
                         setActiveIndex((i) => Math.max(i - 1, 0));
