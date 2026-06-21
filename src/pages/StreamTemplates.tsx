@@ -10,7 +10,11 @@ import {
 } from "@stellar/design-system";
 
 const Card = UntypedCard as unknown as React.FC<React.ComponentProps<"div">>;
-const Icon = UntypedIcon as unknown as React.FC<{ name: string; size?: string; className?: string }>;
+const Icon = UntypedIcon as unknown as React.FC<{
+  name: string;
+  size?: string;
+  className?: string;
+}>;
 const Text = UntypedText as unknown as React.FC<{
   as?: React.ElementType;
   size?: "xs" | "sm" | "md" | "lg" | "xl";
@@ -369,7 +373,11 @@ const StreamTemplates: React.FC = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" size="sm" onClick={() => setEditingTemplate(null)}>
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={() => setEditingTemplate(null)}
+          >
             Cancel
           </Button>
           <Button variant="primary" size="sm" onClick={handleSaveEdit}>
