@@ -16,4 +16,4 @@ Object.defineProperty(window, "matchMedia", {
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });

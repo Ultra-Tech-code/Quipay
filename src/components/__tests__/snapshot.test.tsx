@@ -60,7 +60,7 @@ jest.mock("@stellar/design-system", () => {
 
 describe("frontend component snapshots", () => {
   it("renders Button", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<Button variant="primary">Pay Salary</Button>);
     });
@@ -68,7 +68,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders Card composition", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(
         <Card>
@@ -88,7 +88,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders Input with validation", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(
         <Input
@@ -104,7 +104,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders Badge", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<Badge variant="warning">Pending</Badge>);
     });
@@ -112,7 +112,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders Spinner", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<Spinner size="lg" label="Syncing" />);
     });
@@ -120,7 +120,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders Skeleton variants", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(
         <Box gap="md">
@@ -134,7 +134,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders SkeletonCard", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<SkeletonCard lines={4} />);
     });
@@ -142,7 +142,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders SkeletonRow", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<SkeletonRow />);
     });
@@ -150,7 +150,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders StreamCardSkeleton", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<StreamCardSkeleton />);
     });
@@ -158,7 +158,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders EarningsSkeleton", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<EarningsSkeleton />);
     });
@@ -166,7 +166,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders VaultBalanceSkeleton", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<VaultBalanceSkeleton />);
     });
@@ -174,7 +174,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders EmptyState", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(
         <EmptyState
@@ -190,7 +190,7 @@ describe("frontend component snapshots", () => {
   });
 
   it("renders Tooltip", () => {
-    let tree: ReturnType<typeof renderer.create>;
+    let tree = null as unknown as ReturnType<typeof renderer.create>;
     act(() => {
       tree = renderer.create(<Tooltip content="Current network status" />);
     });
