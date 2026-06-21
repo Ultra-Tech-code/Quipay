@@ -1,4 +1,4 @@
-import React, { act } from "react";
+import { act } from "react";
 import renderer from "react-test-renderer";
 import { TransactionProgressOverlay } from "../TransactionProgressOverlay";
 
@@ -41,7 +41,7 @@ describe("TransactionProgressOverlay", () => {
   });
 
   it("renders processing title and all stages when visible", () => {
-    let root: ReturnType<typeof renderer.create>["root"];
+    let root = null as unknown as ReturnType<typeof renderer.create>["root"];
     act(() => {
       root = renderer.create(
         <TransactionProgressOverlay isVisible stage="signing" />,
@@ -54,7 +54,7 @@ describe("TransactionProgressOverlay", () => {
 
     const labels = root
       .findAllByType("p")
-      .map((node: ReturnType<typeof renderer.create>) =>
+      .map((node: ReturnType<typeof renderer.create>["root"]) =>
         nodeText(node.children),
       );
 
@@ -70,7 +70,7 @@ describe("TransactionProgressOverlay", () => {
 
   it("shows Done button on confirmed stage and calls onDismiss", () => {
     const onDismiss = jest.fn();
-    let root: ReturnType<typeof renderer.create>["root"];
+    let root = null as unknown as ReturnType<typeof renderer.create>["root"];
     act(() => {
       root = renderer.create(
         <TransactionProgressOverlay
